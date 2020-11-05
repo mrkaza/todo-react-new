@@ -1,5 +1,6 @@
 const initState = {
-    errorMessage: null,
+    loginError: null,
+    regError: null,
     user: null
 }
 
@@ -9,35 +10,39 @@ const authReducer = (state = initState, action) => {
             return {
                 ...state,
                 user: action.user.user,
-                errorMessage: null
+                loginError: null,
+                regError: null
             }
         case 'REGISTER_ERROR':
             return {
                 ...state,
-                errorMessage: action.error.message
+                regError: action.error.message
             }
         case 'LOGIN':
             return {
                 ...state,
                 user:action.user.user,
-                errorMessage:null
+                loginError: null,
+                regError: null
             }
         case 'LOGIN_ERROR':
             return {
                 ...state,
-                errorMessage: action.error.message
+                loginError: action.error.message
             }
         case 'FACEBOOK_LOGIN':
             return {
                 ...state,
                 user: action.user.user,
-                errorMessage: null
+                loginError: null,
+                regError: null
             }
         case 'LOGOUT':
             return {
                 ...state,
                 user: null,
-                errorMessage: null
+                loginError: null,
+                regError: null
             }
         default:
             return state

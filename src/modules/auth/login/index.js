@@ -9,7 +9,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
 
-    const errorMessage = useSelector(state => state.auth.errorMessage);
+    const errorMessage = useSelector(state => state.auth.loginError);
 
     const handleSubmit = (e) => {
         e.preventDefault();

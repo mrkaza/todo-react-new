@@ -8,7 +8,7 @@ const Register = () => {
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
 
-    const errorMessage = useSelector(state=> state.auth.errorMessage);
+    const errorMessage = useSelector(state=> state.auth.regError);
 
     const handleSubmit = (e) => {
         e.preventDefault();
